@@ -1,6 +1,6 @@
 from redis import Redis
 
-cache_endpoint = 'xxx.xxx.xxx.amazonaws.com'
+cache_endpoint = os.environ["CACHE_ENDPOINT"]
 service_port = 6379
 
 redis = Redis(host=cache_endpoint, port=service_port)
