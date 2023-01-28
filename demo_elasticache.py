@@ -92,7 +92,7 @@ def cache_list_remove_keys():
     redis.delete(key_to_delete)
     print("DELETED: key = ", key_to_delete)   
     
-    # delete keys that match the pattern "africa*" and "sports*"
+    # delete keys that match the pattern "sports*"
     keys_to_delete = redis.keys("africa*")
     redis.delete(*keys_to_delete)
     print("DELETED: keys = ", keys_to_delete)   
@@ -114,3 +114,6 @@ try:
     
 except Exception as e:
     print('EXCEPTION: host could not be accessed ---> ', repr(e))
+
+
+
